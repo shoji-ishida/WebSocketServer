@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <f:view>
+      <h:outputLabel value="WebPush"/><p/>
+       <h:form>
+           <h:outputText value="#{sessionHandler.count}"/><a> connections</a><h:commandButton value="Reload" action="index"/><p/>
+           <h:commandButton value="Push" action="#{sessionHandler.pushToAllSessions}" styleClass="button" /><p/>
+           <h:commandButton value="Concurrent Push" action="#{sessionHandler.pushConcurrentlyToAllSessions}" styleClass="button" />
+       </h:form>
+   </f:view>
+</html>

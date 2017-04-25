@@ -10,7 +10,8 @@
        <h:form>
            <h:outputText value="#{sessionHandler.count}"/><a> connections</a><h:commandButton value="Reload" action="index"/><p/>
            <h:commandButton value="Push" action="#{sessionHandler.pushToAllSessions}" styleClass="button" /><p/>
-           <h:commandButton value="Concurrent Push" action="#{sessionHandler.pushConcurrentlyToAllSessions}" styleClass="button" />
+           <h:commandButton value="Concurrent Push" action="#{sessionHandler.pushConcurrentlyToAllSessions}" styleClass="button" /><p/>
+           <h:commandButton value="Push" type="submit"/> <h:inputText value="#{scheduler.delayInSec}"/> sec(s) later concurrently<p/>
        </h:form>
    </f:view>
 </html>

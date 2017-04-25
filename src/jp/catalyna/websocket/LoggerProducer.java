@@ -13,6 +13,8 @@ import java.util.logging.Logger;
 
 @Dependent
 public class LoggerProducer {
+    static final Level level = Level.WARNING;
+
     @Inject
     InjectionPoint point;
 
@@ -20,7 +22,7 @@ public class LoggerProducer {
     public Logger getLogger() {
         String loggerName = point.getMember().getDeclaringClass().getName();
         Logger logger = Logger.getLogger(loggerName);
-        logger.setLevel(Level.WARNING);
+        logger.setLevel(level);
         return logger;
     }
 }

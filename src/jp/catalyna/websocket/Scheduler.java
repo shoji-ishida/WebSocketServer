@@ -2,6 +2,7 @@ package jp.catalyna.websocket;
 
 import javax.annotation.Resource;
 import javax.enterprise.concurrent.ManagedScheduledExecutorService;
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -12,7 +13,7 @@ import java.util.logging.Logger;
  * Created by ishida on 2017/04/25.
  */
 @Named(value="scheduler")
-@Dependent
+@ApplicationScoped
 public class Scheduler {
     @Inject
     transient Logger logger;
@@ -34,7 +35,7 @@ public class Scheduler {
     }
 
     private void executeScheduledTask() {
-        logger.info("Scheduled task to execute in " + delayInSec + "sec(s)");
+        logger.info("Scheduled task to execute in " + delayInSec + " sec(s)");
         MyRunnableTask task = new MyRunnableTask();
         managedScheduledExecsvc.schedule(
                 task, delayInSec, TimeUnit.SECONDS);

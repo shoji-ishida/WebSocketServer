@@ -1,8 +1,8 @@
 package jp.catalyna.websocket;
 
 import javax.annotation.Resource;
-import javax.ejb.Stateless;
 import javax.enterprise.concurrent.ManagedScheduledExecutorService;
+import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  * Created by ishida on 2017/04/25.
  */
 @Named(value="scheduler")
-@Stateless
+@Dependent
 public class Scheduler {
     @Inject
     transient Logger logger;

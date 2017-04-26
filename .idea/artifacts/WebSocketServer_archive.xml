@@ -3,9 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/WebSocketServer_archive</output-path>
     <root id="archive" name="WebSocketServer archive.war">
       <element id="artifact" artifact-name="WebSocketServer" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="lib" />
-      </element>
     </root>
   </artifact>
 </component>

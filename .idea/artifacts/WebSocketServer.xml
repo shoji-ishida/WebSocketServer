@@ -7,7 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="WebSocketServer" />
         </element>
-        <element id="directory" name="lib" />
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="com.typesafe.akka:akka-remote_2.11:2.5.1" />
+          <element id="library" level="project" name="com.typesafe.akka:akka-actor_2.11:2.5.1" />
+          <element id="library" level="project" name="com.google.protobuf:protobuf-java:3.3.0" />
+        </element>
       </element>
     </root>
   </artifact>

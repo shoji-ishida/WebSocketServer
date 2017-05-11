@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 /**
  * Created by ishida on 2017/04/18.
  */
-@ApplicationScoped
 @ServerEndpoint("/actions")
 public class WebSocketServer {
     @Inject
